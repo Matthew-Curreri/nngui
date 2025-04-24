@@ -1,0 +1,65 @@
+/* frontend/style.css */
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f8f9fa;
+}
+h2 {
+    margin-top: 1em;
+    color: #343a40;
+}
+label {
+    font-weight: bold;
+}
+input[type="text"], select {
+    margin: 5px 0 15px 0;
+    padding: 5px;
+    width: 200px;
+}
+button {
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+button:disabled {
+    opacity: 0.6;
+}
+
+/* Training output area */
+.output-log {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #212529;
+    color: #f8f9fa;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #343a40;
+    border-radius: 4px;
+}
+
+/* Chat area */
+.chat-area {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.message {
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+}
+.message.user {
+    background: #d1e7dd;  /* light green background for user */
+    text-align: right;
+}
+.message.assistant {
+    background: #e2e3e5;  /* light gray background for assistant */
+    text-align: left;
+}

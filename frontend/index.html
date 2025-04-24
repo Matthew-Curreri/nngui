@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>LLaMA 3.3 Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>LLaMA 3.3 Local Training and Inference</h1>
+
+<!-- Model Selection for Chat -->
+<div>
+    <label for="modelSelect">Chat Model: </label>
+    <select id="modelSelect"></select>
+</div>
+
+<!-- Training Section -->
+<div id="trainingSection">
+    <h2>Train a Model</h2>
+    <form id="trainForm">
+        <label for="baseModelSelect">Base model:</label><br/>
+        <select id="baseModelSelect"></select><br/>
+        <label for="newModelName">New model name:</label><br/>
+        <input type="text" id="newModelName" required /><br/>
+        <label for="datasetFile">Training data (JSON):</label><br/>
+        <input type="file" id="datasetFile" accept=".json" required /><br/>
+        <button type="submit" id="trainButton">Start Training</button>
+    </form>
+    <pre id="trainOutput" class="output-log"></pre>
+</div>
+
+<!-- Chat Section -->
+<div id="chatSection">
+    <h2>Chat with Model</h2>
+    <div id="chatArea" class="chat-area"></div>
+    <div id="chatControls">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button id="sendButton">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
